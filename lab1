@@ -1,0 +1,76 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+
+namespace max
+{
+    internal class program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { -1, 5, 0, 9, 98, 76 };
+            program obj = new program();
+            int a = obj.add(arr);
+            Console.WriteLine(a);
+            int b = obj.max(arr);
+            Console.WriteLine(b);
+            int c = obj.min(arr);
+            Console.WriteLine(c);
+            int d = obj.avg(arr);
+            Console.WriteLine(d);
+
+        
+        
+        
+        }
+
+
+        public int add(int[] array)
+        {
+            {
+                int sum = 0;
+
+                for (int i = 0; i < array.Length; i++)
+                    sum += array[i];
+
+                return sum;
+
+            }
+            
+            
+        }
+        public int max (int[] arr)
+
+        { 
+            int max= arr[0];
+            for (int i = 1; i < arr.Length; i++)
+                if (arr[i] > max)
+                    max = arr[i];
+
+            return max;
+        }
+        public int min(int[] arr)
+
+        {
+            int min = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+                if (arr[i] < min)
+                    min = arr[i];
+
+            return min;
+
+        }
+            public int avg(int[] arr)
+        {
+            int sum = 0;
+            int avg;
+            for (int i = 0; i < arr.Length; i++)
+                sum += arr[i];
+            avg = sum/arr.Length;
+            return avg ;
+
+            
+        }
+    }
+         
+
+}
